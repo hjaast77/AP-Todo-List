@@ -5,8 +5,11 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 export default function TaskItem({ item, onDeleteItem, onToggleItem }) {
   return (
     <li>
-      <Checkbox checked={item.packed} onChange={() => onToggleItem(item.id)} />
-      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+      <Checkbox
+        checked={item.terminada}
+        onChange={() => onToggleItem(item.id)}
+      />
+      <span style={item.terminada ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}
       </span>
       <button

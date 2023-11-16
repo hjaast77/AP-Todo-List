@@ -11,7 +11,7 @@ export default function TaskForm({ onAddItems }) {
 
     if (!description) return;
 
-    const newItem = { description, packed: false, id: Date.now() };
+    const newItem = { description, terminada: false, id: Date.now() };
 
     onAddItems(newItem);
 
@@ -30,7 +30,7 @@ export default function TaskForm({ onAddItems }) {
       >
         <TextField
           fullWidth
-          placeholder="Items..."
+          placeholder="Tareas..."
           id="fullWidth"
           value={description}
           onChange={(e) => setDescription(e.target.value)}

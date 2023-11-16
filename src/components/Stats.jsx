@@ -9,15 +9,15 @@ export default function Stats({ items }) {
     );
 
   const numItems = items.length;
-  const numPacked = items.filter((item) => item.packed).length;
-  const percentage = Math.round((numPacked / numItems) * 100);
+  const numTerminadas = items.filter((item) => item.terminada).length;
+  const porcentaje = Math.round((numTerminadas / numItems) * 100);
 
   return (
     <footer className="stats">
       <em>
-        {percentage === 100
+        {porcentaje === 100
           ? "Increible, completaste tu lista!"
-          : ` Tenés ${numItems} items en tu lista, y hasta ahora completaste ${numPacked} (${percentage}%)`}
+          : ` Tenés ${numItems} items en tu lista, y hasta ahora completaste ${numTerminadas} (${porcentaje}%)`}
       </em>
     </footer>
   );

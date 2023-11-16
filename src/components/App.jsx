@@ -48,7 +48,7 @@ export default function App() {
     // Actualizar el estado y cambiar el estado a "completada"
     setItems((items) =>
       items.map((item) =>
-        item.id === id ? { ...item, packed: !item.packed } : item
+        item.id === id ? { ...item, terminada: !item.terminada } : item
       )
     );
   }

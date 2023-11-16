@@ -25,7 +25,7 @@ export default function TaskList({
   if (sortBy === "packed")
     sortedItems = items
       .slice()
-      .sort((a, b) => Number(a.packed) - Number(b.packed));
+      .sort((a, b) => Number(a.terminada) - Number(b.terminada));
 
   return (
     <div className="list">
